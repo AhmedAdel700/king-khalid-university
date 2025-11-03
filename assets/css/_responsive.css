@@ -31,3 +31,47 @@
   }
 }
 
+/* -------------------------------------------------- */
+/* 🟢 TABS RESPONSIVENESS */
+/* -------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .tabs-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-pills {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+
+  .nav-pills .nav-item {
+    flex: 0 0 auto;
+  }
+}
+
+/* LG and smaller: tabs take full width and allow horizontal scroll if needed */
+@media (max-width: 991.98px) {
+  .tabs-box {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-pills {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+
+  .nav-pills .nav-item {
+    flex: 0 0 auto;
+  }
+}
+

@@ -38,7 +38,7 @@ function initSwipers() {
 initSwipers();
 
 // Re-init when tab changes
-document.querySelectorAll('[data-bs-toggle="tab"]').forEach((tab) => {
+document.querySelectorAll('[data-bs-toggle="tab"], [data-bs-toggle="pill"]').forEach((tab) => {
     tab.addEventListener("shown.bs.tab", () => initSwipers());
 });
 

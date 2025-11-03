@@ -66,6 +66,162 @@ html[dir="ltr"] .hero-img {
 }
 
 /* -------------------------------------------------- */
+/* 🟢 Training Section */
+/* -------------------------------------------------- */
+
+.training-section {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid #f1f2f2;
+  padding-bottom: 18px;
+}
+
+.section-header h2,
+.section-header-2 h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--main-black);
+}
+
+.section-header p,
+.section-header-2 p {
+  color: #333333;
+  font-size: 24px;
+  margin-top: 4px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 8px;
+  width: 162px;
+  height: 48px;
+  justify-content: center;
+  text-decoration: none;
+  transition: var(--main-transition);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.view-all-btn:hover {
+  background: var(--primary-color);
+  color: var(--main-white);
+}
+
+/* Swiper styling */
+.training-swiper {
+  width: 100%;
+  padding: 56px 0;
+}
+
+.training-card {
+  background-color: var(--secondary-color);
+  border-radius: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  transition: transform 0.3s ease;
+  height: 224px;
+  border: 1px solid #f1f2f2;
+  border-radius: 8px;
+}
+
+.training-card:hover {
+  transform: translateY(-5px);
+}
+
+.training-card img {
+  width: 72px;
+  height: 72px;
+}
+
+.training-card p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-black);
+}
+
+.swiper-pagination-bullet {
+  background: var(--primary-color);
+}
+
+/* -------------------------------------------------- */
+/* 🟢 LEARNING TRIPS */
+/* -------------------------------------------------- */
+
+#learning-trips {
+  margin-bottom: 100px;
+}
+
+.section-header-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tabs-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-pills {
+  background-color: #f7f7f7;
+  padding: 8px;
+  border-radius: 6px;
+  display: flex;
+  gap: 8px;
+}
+
+.nav-pills .nav-item {
+  flex: 0 0 auto;
+}
+
+.nav-pills .nav-link {
+  width: 172px;
+  height: 48px;
+  background-color: transparent;
+  border-radius: 4px;
+  color: var(--secondary-black);
+  font-weight: 700;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--main-transition) ease-in-out;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: var(--main-white);
+  color: var(--primary-color);
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--main-white);
+  color: var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------------------------- */
 /* 🔵 SEARCH BOX */
 /* -------------------------------------------------- */
 .search-box {
@@ -243,162 +399,6 @@ html[dir="ltr"] .search-box .form-select {
 }
 
 /* -------------------------------------------------- */
-/* 🟢 Training Section */
-/* -------------------------------------------------- */
-
-.training-section {
-  margin-top: 40px;
-  margin-bottom: 80px;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  border-bottom: 1px solid #f1f2f2;
-  padding-bottom: 18px;
-}
-
-.section-header h2,
-.section-header-2 h2 {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--main-black);
-}
-
-.section-header p,
-.section-header-2 p {
-  color: #333333;
-  font-size: 24px;
-  margin-top: 4px;
-  font-weight: 400;
-  line-height: 1.7;
-}
-
-.view-all-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  border-radius: 8px;
-  width: 162px;
-  height: 48px;
-  justify-content: center;
-  text-decoration: none;
-  transition: var(--main-transition);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.view-all-btn:hover {
-  background: var(--primary-color);
-  color: var(--main-white);
-}
-
-/* Swiper styling */
-.training-swiper {
-  width: 100%;
-  padding: 56px 0;
-}
-
-.training-card {
-  background-color: var(--secondary-color);
-  border-radius: 12px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  transition: transform 0.3s ease;
-  height: 224px;
-  border: 1px solid #f1f2f2;
-  border-radius: 8px;
-}
-
-.training-card:hover {
-  transform: translateY(-5px);
-}
-
-.training-card img {
-  width: 72px;
-  height: 72px;
-}
-
-.training-card p {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--main-black);
-}
-
-.swiper-pagination-bullet {
-  background: var(--primary-color);
-}
-
-/* -------------------------------------------------- */
-/* 🟢 LEARNING TRIPS */
-/* -------------------------------------------------- */
-
-#learning-trips {
-  margin-bottom: 100px;
-}
-
-.section-header-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.tabs-box {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-}
-
-.nav-pills {
-  background-color: #f7f7f7;
-  padding: 8px;
-  border-radius: 6px;
-  display: flex;
-  gap: 8px;
-}
-
-.nav-pills .nav-item {
-  flex: 0 0 auto;
-}
-
-.nav-pills .nav-link {
-  width: 172px;
-  height: 48px;
-  background-color: transparent;
-  border-radius: 4px;
-  color: var(--secondary-black);
-  font-weight: 700;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--main-transition) ease-in-out;
-}
-
-.nav-pills .nav-link:hover {
-  background-color: var(--main-white);
-  color: var(--primary-color);
-}
-
-.nav-pills .nav-link.active {
-  background-color: var(--main-white);
-  color: var(--primary-color);
-  border-radius: 4px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-}
-
-/* -------------------------------------------------- */
 /* 🟣 RESPONSIVE ADJUSTMENTS */
 /* -------------------------------------------------- */
 @media (max-width: 1300px) {
@@ -504,22 +504,51 @@ html[dir="ltr"] .search-box .form-select {
 }
 
 @media (max-width: 992px) {
+  #learning-trips {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 992px) {
   #email-section {
     margin-bottom: 60px;
   }
   .email-content {
     flex-direction: column;
     text-align: center;
+    align-items: stretch;
   }
 
   .text-box,
   .form-box {
     flex: 1 1 100%;
+    width: 100%;
     text-align: center;
   }
 
   .email-box {
-    padding: 40px 30px;
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Email section: full-width inputs/buttons and improved spacing */
+  .email-content {
+    gap: 24px;
+  }
+  .text-box p {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .form-box input,
+  .subscribe-btn {
+    width: 100%;
+    display: block;
+  }
+
+  .form-box label {
+    text-align: start;
   }
 }
 
