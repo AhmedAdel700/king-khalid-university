@@ -4,7 +4,7 @@
 
 /* ✅ Full-width sticky header */
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -178,6 +178,10 @@ button.lang-btn:hover {
   color: var(--primary-color);
 }
 
+.btn .btn-secondary .dropdown-toggle {
+  color: var(--main-black) !important;
+}
+
 /* -------------------------------------------------- */
 /* 🟢 MOBILE MENU TOGGLE - Hidden on 2xl+ */
 /* -------------------------------------------------- */
@@ -274,13 +278,13 @@ ul.offcanvas-nav {
 
 .offcanvas-nav .dropdown-item {
   padding: 12px 20px 12px 40px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: var(--border-1);
   text-align: start;
 }
 
 .offcanvas-footer {
   padding: 20px;
-  border-top: 1px solid #e0e0e0;
+  border-top: var(--border-1);
   display: flex;
   flex-direction: column;
   gap: 16px;
