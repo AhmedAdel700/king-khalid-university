@@ -1,3 +1,21 @@
+/* ==================================================
+   Home.css Index
+   1) Hero Section
+   2) Training Section
+   3) Learning Trips
+   4) Status Section
+   5) Our Partners Section
+   6) Testimonials Section
+   7) Email Section
+   8) Responsive Adjustments
+      - <=1300px
+      - <=1200px
+      - <=1024px
+      - <=992px
+      - <=768px
+      - <=480px
+   ================================================== */
+
 /* -------------------------------------------------- */
 /* 🟢 HERO SECTION */
 /* -------------------------------------------------- */
@@ -63,6 +81,73 @@ html[dir="ltr"] .hero-img {
   align-items: center;
   gap: 8px;
   width: 155px;
+}
+
+.search-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 24px;
+  border: 1px solid #f9f9f9;
+  border-radius: 16px;
+  background-color: var(--main-white);
+  padding: 16px 32px 32px 32px;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 1033px;
+  min-height: 154px;
+  z-index: 10;
+}
+
+.search-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 350px;
+}
+
+.search-box div > *:not(label) {
+  height: 48px;
+}
+
+.search-box div label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--main-black);
+  text-align: start;
+}
+
+/* Better native select styling (arrow, focus, hover) */
+.search-box .form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--main-white);
+  background-image: url("../images/bottom-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 16px center; /* RTL: left side by default */
+  padding-inline-start: 12px;
+  padding-inline-end: 12px;
+  border-color: #ebedef;
+  transition: box-shadow var(--main-transition),
+    border-color var(--main-transition);
+}
+
+html[dir="ltr"] .search-box .form-select {
+  background-position: calc(100% - 16px) center; /* LTR: right side */
+}
+
+.search-box .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
+  outline: none;
+}
+
+.search-box button {
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 /* -------------------------------------------------- */
@@ -344,76 +429,6 @@ html[dir="ltr"] .hero-img {
 }
 
 /* -------------------------------------------------- */
-/* 🔵 SEARCH BOX */
-/* -------------------------------------------------- */
-.search-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 24px;
-  border: 1px solid #f9f9f9;
-  border-radius: 16px;
-  background-color: var(--main-white);
-  padding: 16px 32px 32px 32px;
-  box-shadow: var(--shadow-lg);
-  width: 100%;
-  max-width: 1033px;
-  min-height: 154px;
-  z-index: 10;
-}
-
-.search-box div {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1;
-  min-width: 350px;
-}
-
-.search-box div > *:not(label) {
-  height: 48px;
-}
-
-.search-box div label {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--main-black);
-  text-align: start;
-}
-
-/* Better native select styling (arrow, focus, hover) */
-.search-box .form-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: var(--main-white);
-  background-image: url("../images/bottom-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 16px center; /* RTL: left side by default */
-  padding-inline-start: 12px;
-  padding-inline-end: 12px;
-  border-color: #ebedef;
-  transition: box-shadow var(--main-transition),
-    border-color var(--main-transition);
-}
-
-html[dir="ltr"] .search-box .form-select {
-  background-position: calc(100% - 16px) center; /* LTR: right side */
-}
-
-.search-box .form-select:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.25rem rgba(4, 85, 49, 0.15);
-  outline: none;
-}
-
-.search-box button {
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-/* -------------------------------------------------- */
 /* 🟢 TESTIMONIALS SECTION */
 /* -------------------------------------------------- */
 
@@ -428,6 +443,7 @@ html[dir="ltr"] .search-box .form-select {
   font-weight: 700;
   text-align: start;
   color: var(--main-black);
+  margin: 0;
 }
 
 .swiper {
@@ -439,7 +455,7 @@ html[dir="ltr"] .search-box .form-select {
   background: #fbfcfc;
   border: 1px solid #eee;
   border-radius: 8px;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
   padding: 30px;
   height: 100%;
   position: relative;
@@ -471,6 +487,7 @@ html[dir="ltr"] .quote-icon i {
 
 .stars {
   color: #feeca3;
+  font-size: 18px;
 }
 
 .testimonial-text {
@@ -627,7 +644,10 @@ html[dir="ltr"] .email-box::before {
 /* -------------------------------------------------- */
 /* 🟣 RESPONSIVE ADJUSTMENTS */
 /* -------------------------------------------------- */
+
+/* <=1300px */
 @media (max-width: 1300px) {
+  /* Hero */
   .hero {
     margin-top: 40px;
   }
@@ -637,7 +657,17 @@ html[dir="ltr"] .email-box::before {
   }
 }
 
+/* <=1280px */
+@media (max-width: 1280px) {
+  /* Learning Trips */
+  .cards-box {
+    margin-top: 15px;
+  }
+}
+
+/* <=1200px */
 @media (max-width: 1200px) {
+  /* Hero */
   .hero {
     height: fit-content;
     min-height: fit-content;
@@ -678,14 +708,45 @@ html[dir="ltr"] .email-box::before {
   }
 }
 
-/* -------------------------------------------------- */
-/* 🟠 TABLET + MOBILE FIXES */
-/* -------------------------------------------------- */
+/* <=1024px */
+@media (max-width: 1024px) {
+  /* Training */
+  .training-section {
+    margin-top: 0px;
+    margin-bottom: 35px;
+  }
+
+  .training-swiper {
+    padding: 25px 0;
+  }
+
+  .section-header {
+    padding-bottom: 25px;
+  }
+}
+
+/* <=992px */
 @media (max-width: 992px) {
+  /* Hero */
   .hero .hero-text-box {
     padding: 0 0 2rem;
   }
 
+  /* Training */
+  /* (no rules) */
+
+  /* Learning Trips */
+  #learning-trips {
+    margin-bottom: 60px;
+  }
+
+  /* Status */
+  /* (no rules) */
+
+  /* Our Partners */
+  /* (no rules) */
+
+  /* Search Box */
   .search-box {
     flex-direction: column;
     align-items: stretch;
@@ -706,39 +767,11 @@ html[dir="ltr"] .email-box::before {
     height: 100%;
     min-height: 100vh;
   }
-}
 
-/* -------------------------------------------------- */
-/* 🟡 SMALL MOBILE */
-/* -------------------------------------------------- */
-@media (max-width: 768px) {
-  .hero .hero-text {
-    font-size: 28px;
-  }
+  /* Testimonials */
+  /* (no rules) */
 
-  .hero .hero-text-box {
-    gap: 20px;
-  }
-
-  .search-box {
-    padding: 16px;
-    gap: 16px;
-  }
-
-  .frame1 {
-    height: 100%;
-    min-height: 100vh;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 992px) {
-  #learning-trips {
-    margin-bottom: 60px;
-  }
-}
-
-@media (max-width: 992px) {
+  /* Email */
   #email-section {
     margin-bottom: 60px;
   }
@@ -777,13 +810,65 @@ html[dir="ltr"] .email-box::before {
   }
 }
 
+/* <=768px */
 @media (max-width: 768px) {
+  /* Hero */
+  .hero .hero-text {
+    font-size: 28px;
+  }
+  .hero .hero-text-box {
+    gap: 20px;
+  }
+
+  /* Training */
+  /* (no rules) */
+
+  /* Learning Trips */
+  /* (no rules) */
+
+  /* Status */
+  .status-section .container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .status-section .container .status-box > :first-child {
+    font-size: 28px;
+  }
+  .status-section .container .status-box > :last-child {
+    font-size: 14px;
+  }
+
+  /* Our Partners */
+  .our-partners {
+    padding: 30px 0;
+  }
+  .partner-box {
+    gap: 16px;
+  }
+  .partner-box .box {
+    height: 120px;
+  }
+
+  /* Search Box */
+  .search-box {
+    padding: 16px;
+    gap: 16px;
+  }
+  .frame1 {
+    height: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 40px 0;
+  }
+
+  /* Email */
   .email-box::before {
     background-size: auto;
   }
-}
-
-@media (max-width: 768px) {
   .email-content {
     gap: 24px;
   }
@@ -797,80 +882,24 @@ html[dir="ltr"] .email-box::before {
     width: 100%;
     display: block;
   }
-
   .form-box label {
     text-align: start;
   }
 }
 
-@media (max-width: 1024px) {
-  .training-section {
-    margin-top: 0px;
-    margin-bottom: 35px;
-  }
-
-  .training-swiper {
-    padding: 25px 0;
-  }
-
-  .section-header {
-    padding-bottom: 25px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .cards-box {
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .status-section .container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
-  .status-section .container .status-box > :first-child {
-    font-size: 28px;
-  }
-
-  .status-section .container .status-box > :last-child {
-    font-size: 14px;
-  }
-}
-
+/* <=480px */
 @media (max-width: 480px) {
+  /* Status */
   .status-section .container {
     grid-template-columns: 1/2fr;
   }
-}
 
-@media (max-width: 768px) {
-  .our-partners {
-    padding: 30px 0;
-  }
-  .partner-box {
-    gap: 16px;
-  }
-
-  .partner-box .box {
-    height: 120px;
-  }
-}
-
-@media (max-width: 480px) {
+  /* Our Partners */
   .partner-box {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-
   .partner-box .box {
     height: 100px;
-  }
-}
-
-@media (max-width: 768px) {
-  .testimonials-section {
-    padding: 40px 0;
   }
 }

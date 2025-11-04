@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Khalid University</title>
+
+    <!-- CSS Files And CDNs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <main class="sign-up-page">
+
+        <!-- Start Of Left Side -->
+        <aside>
+            <div class="container-left">
+                <div class="sign-up-title">
+                    <h2>مرحبا بعودتك مجددا.</h2>
+                    <p>من فضلك ادخل البيانات كاملة ليمكنك تسجيل الحساب</p>
+                </div>
+
+                <form action="#">
+                    <!-- Email -->
+                    <div class="input-group">
+                        <label for="email" class="w-100 mb-1">البريد الإلكتروني</label>
+                        <div class="position-relative w-100">
+                            <i class="fa-solid fa-envelope input-icon-start"></i>
+                            <input id="email" type="email" class="form-control" placeholder="Email@Example.Com">
+                        </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="input-group">
+                        <label for="password" class="w-100 mb-1">كلمة المرور</label>
+                        <div class="position-relative w-100">
+                            <i class="fa-solid fa-lock input-icon-start"></i>
+                            <input id="password" type="password" class="form-control has-end-icon"
+                                placeholder="أكتب كلمة المرور">
+                            <i class="fa-solid fa-eye" id="togglePassword"></i>
+                        </div>
+                    </div>
+
+                    <div class="check-box form-check">
+                        <input class="form-check-input custom-check" type="checkbox" value="" id="checkDefault" />
+                        <label class="form-check-label" for="checkDefault">
+                            تذكر كلمة المرور
+                        </label>
+
+                        <a href="#" class="forgot">هل نسيت كلمة المرور ؟</a>
+                    </div>
+
+                    <button class="main-btn">تسجيل الدخول</button>
+                </form>
+
+                <div class="login-link">
+                    <span>لم تسجل حساب حتى الان؟</span>
+                    <a href="sign-up.html">انشاء حساب</a>
+                </div>
+            </div>
+        </aside>
+        <!-- End Of Left Side -->
+
+        <!-- Start Of Right Side -->
+        <aside>
+            <img src="/assets/images/login-image.svg" alt="Logo">
+        </aside>
+        <!-- End Of Right Side -->
+    </main>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
