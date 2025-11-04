@@ -353,6 +353,10 @@ ul.offcanvas-nav {
   color: var(--hover-btn-bg);
 }
 
+.dropdown a.dropdown-toggle {
+  color: var(--main-black) !important;
+}
+
 /* -------------------------------------------------- */
 /* 🟢 RESPONSIVE BREAKPOINTS */
 /* -------------------------------------------------- */

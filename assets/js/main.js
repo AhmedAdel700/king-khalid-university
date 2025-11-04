@@ -4,41 +4,28 @@ const trainingSwiper = new Swiper('.training-swiper', {
     spaceBetween: 16,
     grabCursor: true,
     loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
     breakpoints: {
         640: { slidesPerView: 2 },
         992: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 },
+        1280: { slidesPerView: 4 },
     },
 });
 
-// 🟢 Swipers for each tab
-function initSwipers() {
-    const swipers = document.querySelectorAll(".swiper");
-    swipers.forEach((swiperEl) => {
-        new Swiper(swiperEl, {
-            slidesPerView: 1.2,
-            spaceBetween: 16,
-            grabCursor: true,
-            pagination: {
-                el: swiperEl.querySelector(".swiper-pagination"),
-                clickable: true,
-            },
-            breakpoints: {
-                640: { slidesPerView: 2 },
-                992: { slidesPerView: 3 },
-                1200: { slidesPerView: 4 },
-            },
-        });
-    });
-}
-initSwipers();
-
-// Re-init when tab changes
-document.querySelectorAll('[data-bs-toggle="tab"], [data-bs-toggle="pill"]').forEach((tab) => {
-    tab.addEventListener("shown.bs.tab", () => initSwipers());
+// 🟢 Testimonials Swiper
+const testimonialsSwiper = new Swiper('.testimonlia.soiwper', {
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    grabCursor: true,
+    loop: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 2.5 },
+        1280: { slidesPerView: 3.5 },
+    },
 });
+
 
