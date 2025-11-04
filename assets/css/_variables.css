@@ -6,13 +6,17 @@
 
 :root {
   --primary-color: #045531;
-  --secondary-color: #EDF4F2;
+  --secondary-color: #edf4f2;
   --primary-color-40: #1e764f;
   --main-white: #ffffff;
   --main-black: #1a1a1a;
-  --secondary-black: #4D4D4D;
+  --secondary-black: #4d4d4d;
   --main-gray: #666666;
   --hover-btn-bg: #033d23;
+
+  --border-1: 1px solid #f1f2f2;
+
+  --border-r-8: 8px;
 
   --shadow-sm: 0px 2.4px 8.61px 0px #00000005;
   --shadow-lg: 0px 12px 53px 0px #0000000a;
