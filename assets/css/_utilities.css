@@ -148,9 +148,7 @@
 
 .card-style .card-body .info .v-line {
   height: 70%;
-  width: 1px;
-  display: block;
-  background-color: #e5e5e5;
+  color: #e5e5e5;
 }
 
 .card-style .card-body .info div {
