@@ -32,7 +32,7 @@ main.courses {
   height: 48px;
   overflow: hidden;
   border: var(--border-1);
-  border-radius: 8px;
+  border-radius: var(--border-r-8);
 }
 
 /* Input styling */

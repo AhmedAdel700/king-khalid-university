@@ -12,10 +12,13 @@
   --main-black: #1a1a1a;
   --secondary-black: #4d4d4d;
   --main-gray: #666666;
+  --secondary-gray: #4D5E6F;
   --hover-btn-bg: #033d23;
 
   --border-1: 1px solid #f1f2f2;
+  --border-2: 1px solid #ECF3F1;
 
+  --border-r-4: 4px;
   --border-r-8: 8px;
 
   --shadow-sm: 0px 2.4px 8.61px 0px #00000005;

@@ -63,14 +63,90 @@ main.sign-up-page aside:first-child form {
   width: 100%;
 }
 
-main.sign-up-page aside:first-child form input {
+main.sign-up-page aside:first-child form input:not(.otp-input.form-control) {
   border-radius: 2px !important;
 }
 
-main.sign-up-page aside:first-child form > div {
+main.sign-up-page aside:first-child form > div:not(.otp-container) {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.sign-in-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--main-black);
+  margin: 0;
+}
+
+/* ===============================
+   OTP Input Styles
+=============================== */
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.otp-input {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 28px;
+  border: 2px solid #ccc;
+  border-radius: var(--border-r-8);
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+/* Remove Bootstrap's full width */
+.otp-input.form-control {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px !important;
+  border: 1px solid #b7b7b7;
+  display: inline-block;
+  color: #b3b3b3;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.otp-title {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+}
+
+.otp-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--main-gray);
+  line-height: 1.7;
+
+  & span {
+    color: var(--main-black);
+  }
+}
+
+.send-again {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-black);
+  font-size: 14px;
+  font-weight: 500;
+
+  & a {
+    font-weight: 700;
+    color: var(--primary-color);
+  }
 }
 
 /* -------------------------------

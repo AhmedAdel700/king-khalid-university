@@ -1,75 +1,95 @@
 // 🟢 Training Fields Swiper
-const trainingSwiper = new Swiper('.training-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    grabCursor: true,
-    loop: true,
-    breakpoints: {
-        640: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-        1280: { slidesPerView: 4 },
-    },
-});
+(() => {
+    const container = document.querySelector('.training-swiper');
+    if (!container) return;
+    new Swiper(container, {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        grabCursor: true,
+        loop: true,
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+        },
+    });
+})();
 
 // 🟢 Testimonials Swiper
-const testimonialsSwiper = new Swiper('.testimonlia.soiwper', {
-    slidesPerView: 1.2,
-    spaceBetween: 20,
-    grabCursor: true,
-    loop: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        640: { slidesPerView: 2 },
-        1024: { slidesPerView: 2.5 },
-        1280: { slidesPerView: 3.5 },
-    },
-});
+(() => {
+    const container = document.querySelector('.testimonlia.soiwper');
+    if (!container) return;
+    new Swiper(container, {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.5 },
+            1280: { slidesPerView: 3.5 },
+        },
+    });
+})();
 
 // 🟢 Learning Trips Swiper
-const learningTripsSwiper = new Swiper('.learning-trips-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    grabCursor: true,
-    loop: true,
-    breakpoints: {
-        640: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-        1280: { slidesPerView: 4 },
-    },
-});
+(() => {
+    const container = document.querySelector('.learning-trips-swiper');
+    if (!container) return;
+    new Swiper(container, {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        grabCursor: true,
+        loop: true,
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+        },
+    });
+})();
 
 // 🟢 Blogs Swiper
-const blogsSwiper = new Swiper('.blogs-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    grabCursor: true,
-    loop: true,
-    breakpoints: {
-        640: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-        1280: { slidesPerView: 4 },
-    },
-});
+(() => {
+    const container = document.querySelector('.blogs-swiper');
+    if (!container) return;
+    new Swiper(container, {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        grabCursor: true,
+        loop: true,
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+        },
+    });
+})();
 
 // 🟢 Partners Swiper
-const partnersSwiper = new Swiper('.partners-swiper', {
-    slidesPerView: 1.2,
-    spaceBetween: 16,
-    grabCursor: true,
-    loop: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        640: { slidesPerView: 2 },
-        992: { slidesPerView: 4 },
-        1280: { slidesPerView: 5 },
-    },
-});
+(() => {
+    const container = document.querySelector('.partners-swiper');
+    if (!container) return;
+    new Swiper(container, {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        grabCursor: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            640: { slidesPerView: 2 },
+            992: { slidesPerView: 4 },
+            1280: { slidesPerView: 5 },
+        },
+    });
+})();
 
 // 🟢 Eye Icon
 document.addEventListener("DOMContentLoaded", function () {
@@ -86,6 +106,101 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// 🟢 Set Active Link in Header after it's loaded dynamically
+(function activateHeaderLinksWhenReady() {
+    function toBaseName(path) {
+        if (!path) return "index";
+        // Strip query/hash
+        const clean = path.split("?")[0].split("#")[0];
+        // If root
+        if (clean === "/") return "index";
+        const last = clean.split("/").filter(Boolean).pop() || "index.html";
+        // Remove extension
+        return last.replace(/\.[^./?#]+$/, "");
+    }
 
+    function urlsMatch(linkEl, currentBase) {
+        const rawHref = (linkEl.getAttribute("href") || "").trim();
+        if (!rawHref || rawHref.startsWith("#") || rawHref.startsWith("javascript:")) return false;
 
+        // Resolve the href to an absolute URL to compare pathnames reliably
+        let resolvedBase = "";
+        let resolvedPath = "";
+        let hrefFileName = "";
+        try {
+            const resolved = new URL(rawHref, window.location.href);
+            resolvedPath = resolved.pathname;
+            resolvedBase = toBaseName(resolved.pathname);
+            hrefFileName = (resolved.pathname.split("/").filter(Boolean).pop()) || "";
+        } catch (_) {
+            resolvedBase = toBaseName(rawHref);
+            resolvedPath = rawHref;
+            hrefFileName = (rawHref.split("/").filter(Boolean).pop()) || "";
+        }
+
+        // Consider index equivalence
+        if (currentBase === "" || currentBase === "/") currentBase = "index";
+        const currentPath = window.location.pathname;
+        const currentFileName = (currentPath.split("/").filter(Boolean).pop()) || "";
+
+        // Primary: basename match
+        if (resolvedBase === currentBase) return true;
+
+        // Secondary: exact path match
+        if (resolvedPath && currentPath && resolvedPath.replace(/\/index\.[^./?#]+$/, "/") === currentPath.replace(/\/index\.[^./?#]+$/, "/")) return true;
+
+        // Tertiary: filename suffix match (handles subfolders)
+        if (hrefFileName && currentPath.endsWith("/" + hrefFileName)) return true;
+
+        return false;
+    }
+
+    function setActiveNavLinks() {
+        const headerRoot = document.getElementById("header");
+        if (!headerRoot) return false;
+
+        const links = headerRoot.querySelectorAll("nav a, .offcanvas-nav a");
+        if (!links.length) return false;
+
+        const currentBase = toBaseName(window.location.pathname);
+        let matched = false;
+        links.forEach((a) => {
+            a.classList.remove("active");
+        });
+        links.forEach((a) => {
+            if (urlsMatch(a, currentBase)) {
+                a.classList.add("active");
+                const li = a.closest("li");
+                if (li) li.classList.add("active");
+                matched = true;
+            }
+        });
+
+        // Fallback: if nothing matched, mark Home on root-like paths
+        if (!matched && (currentBase === "" || currentBase === "index")) {
+            const home = Array.from(links).find((a) => (a.getAttribute("href") || "").trim() === "index.html" || (a.getAttribute("href") || "").trim() === "/");
+            if (home) {
+                home.classList.add("active");
+                const li = home.closest("li");
+                if (li) li.classList.add("active");
+            }
+            matched = !!home;
+        }
+
+        return matched;
+    }
+
+    // Try immediately (in case header is already in DOM)
+    if (setActiveNavLinks()) return;
+
+    // Observe #header until content is injected via jQuery .load
+    const headerRoot = document.getElementById("header");
+    if (!headerRoot) return;
+    const observer = new MutationObserver(() => {
+        if (setActiveNavLinks()) {
+            observer.disconnect();
+        }
+    });
+    observer.observe(headerRoot, { childList: true, subtree: true });
+})();
 

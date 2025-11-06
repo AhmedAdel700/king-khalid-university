@@ -190,7 +190,7 @@ html[dir="ltr"] .search-box .form-select {
   background: transparent;
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
-  border-radius: 8px;
+  border-radius: var(--border-r-8);
   width: 162px;
   height: 48px;
   justify-content: center;
@@ -223,7 +223,7 @@ html[dir="ltr"] .search-box .form-select {
   transition: transform 0.3s ease;
   height: 224px;
   border: var(--border-1);
-  border-radius: 8px;
+  border-radius: var(--border-r-8);
 }
 
 .training-card:hover {
@@ -500,7 +500,7 @@ html[dir="ltr"] .search-box .form-select {
 .testimonial-card {
   background: #fbfcfc;
   border: 1px solid #eee;
-  border-radius: 8px;
+  border-radius: var(--border-r-8);
   box-shadow: var(--shadow-sm);
   padding: 30px;
   height: 100%;
