@@ -116,9 +116,9 @@
   height: 32px;
   background-color: var(--secondary-color);
   color: var(--primary-color);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
-  font-family: "Cairo";
+  font-family: "Raleway", sans-serif;
   padding: 5px 16px;
   text-align: start;
   border-radius: 4px;

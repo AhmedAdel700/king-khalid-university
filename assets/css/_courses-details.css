@@ -22,7 +22,7 @@
   border-radius: 16px;
 }
 
-.like-icon {
+.course-details-img .like-icon {
   position: absolute;
   top: 16px;
   inset-inline-start: 16px;
@@ -541,7 +541,7 @@ html[dir="ltr"] .fqa-container .faq-icon {
 }
 
 .related-coureses h2 {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--main-black);
   margin-bottom: 0;
@@ -554,16 +554,9 @@ html[dir="ltr"] .fqa-container .faq-icon {
   gap: 32px;
 }
 
-.related-coureses h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--main-black);
-  margin-bottom: 0;
-}
-
 .related-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* ✅ 4 cards per row */
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
