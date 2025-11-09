@@ -59,6 +59,10 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
   place-items: center;
+
+  & .fa-heart {
+    color: var(--primary-color) !important;
+  }
 }
 
 @media (max-width: 1200px) {
