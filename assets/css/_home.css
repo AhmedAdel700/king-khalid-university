@@ -183,27 +183,6 @@ html[dir="ltr"] .search-box .form-select {
   line-height: 1.7;
 }
 
-.view-all-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-  border-radius: var(--border-r-8);
-  width: 162px;
-  height: 48px;
-  justify-content: center;
-  text-decoration: none;
-  transition: var(--main-transition);
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.view-all-btn:hover {
-  background: var(--primary-color);
-  color: var(--main-white);
-}
 
 /* Swiper styling */
 .training-swiper {
