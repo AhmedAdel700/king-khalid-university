@@ -1,3 +1,14 @@
+/* ==================================================
+   Header.css Index
+   1) Header Styles
+   2) Header Buttons
+   3) Mobile Menu Toggle
+   4) Offcanvas Styles
+   5) Responsive Breakpoints
+      - <=1399px (Show mobile toggle / Hide desktop nav)
+      - >=1400px (Desktop layout)
+   ================================================== */
+
 /* -------------------------------------------------- */
 /* 🟢 HEADER STYLES */
 /* -------------------------------------------------- */
@@ -161,7 +172,7 @@ ul.offcanvas-nav {
 .offcanvas-nav li a {
   display: block;
   padding: 16px 20px;
-  color: var(--main-gray);
+  color: var(--main-black);
   font-weight: 500;
   transition: all var(--main-transition) ease;
 }
@@ -180,6 +191,7 @@ ul.offcanvas-nav {
 /* Offcanvas dropdown */
 .offcanvas-nav .dropdown {
   height: auto;
+  flex-direction: column;
 }
 
 .offcanvas-nav .dropdown-toggle {

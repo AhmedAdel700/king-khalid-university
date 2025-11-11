@@ -1,6 +1,23 @@
---------------------------------------------------
+/* ==================================================
+   Global.css Index
+   1) Global Resets & Base Styles
+   2) Custom Scrollbar
+   3) Form Controls
+      - Text Inputs
+      - Focus States
+      - Checkbox Styles
+   4) Accordion
+   5) Dropdown Menu
+      - Dropdown Button
+      - Dropdown Menu Styling
+      - Active & Hover States
+      - Responsive Adjustments
+   ================================================== */
+
+/* -------------------------------------------------- */
 /* 🟢 GLOBAL RESETS & BASE STYLES */
 /* -------------------------------------------------- */
+
 * {
   box-sizing: border-box !important;
   padding: 0;
@@ -29,8 +46,9 @@ html {
 }
 
 /* -------------------------------------------------- */
-/* 🟢 Custom Scrollbar */
+/* 🟢 CUSTOM SCROLLBAR */
 /* -------------------------------------------------- */
+
 ::-webkit-scrollbar {
   width: 6px; /* thin scrollbar */
   height: 6px;
@@ -57,8 +75,9 @@ html {
 }
 
 /* -------------------------------------------------- */
-/* 🟢 Form Controls - Global inputs/selects consistent with Hero */
+/* 🟢 FORM CONTROLS - GLOBAL INPUTS/SELECTS */
 /* -------------------------------------------------- */
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -96,9 +115,10 @@ select:focus,
   outline: none;
 }
 
-/* -------------------------------
-   Checkbox Styles
---------------------------------*/
+/* ------------------------------- */
+/* ✅ Checkbox Styles */
+/* ------------------------------- */
+
 .check-box {
   display: flex;
   align-items: center !important;
@@ -246,10 +266,12 @@ select:focus,
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }
+
 .dropdown-menu {
   text-align: start !important;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .breadcrumb > * {
     font-size: 12px !important;

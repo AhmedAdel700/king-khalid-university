@@ -1,6 +1,23 @@
+/* ==================================================
+   Shared.css Index
+   1) Layout & Utility Classes
+   2) Buttons
+      - Primary Buttons
+      - Secondary Buttons
+      - View All Button
+   3) Cards
+      - Card Container
+      - Card Image & Icons
+      - Card Body & Info
+      - Card Buttons
+   4) Arrows
+   5) Empty State
+   ================================================== */
+
 /* -------------------------------------------------- */
 /* 🟢 LAYOUT & UTILITY CLASSES */
 /* -------------------------------------------------- */
+
 .container {
   width: 100%;
   margin-left: auto;
@@ -82,7 +99,7 @@ button.main-btn-2 {
 }
 
 /* -------------------------------------------------- */
-/* 🟢 CARDS*/
+/* 🟢 CARDS */
 /* -------------------------------------------------- */
 
 .card-style {
