@@ -228,7 +228,7 @@ html[dir="ltr"] .search-box .form-select {
 /* -------------------------------------------------- */
 
 #learning-trips {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .section-header-2 {
@@ -315,7 +315,7 @@ html[dir="ltr"] .search-box .form-select {
   background-size: cover;
   background-color: var(--primary-color-40);
   min-height: 176px;
-  margin: 0 0 100px 0;
+  margin: 0 0 50px 0;
   display: flex;
   padding: 15px 0;
 }
@@ -327,6 +327,10 @@ html[dir="ltr"] .search-box .form-select {
   align-items: center;
   gap: 32px;
   width: 100%;
+}
+
+.status-section .swiper {
+  padding: 0;
 }
 
 /* Each status box centered */
@@ -774,7 +778,7 @@ html[dir="ltr"] .email-box::before {
 
   /* Learning Trips */
   #learning-trips {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 
   /* Status */
@@ -864,15 +868,11 @@ html[dir="ltr"] .email-box::before {
   /* (no rules) */
 
   /* Status */
-  .status-section .container {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
   .status-section .container .status-box > :first-child {
-    font-size: 28px;
+    font-size: 50px;
   }
   .status-section .container .status-box > :last-child {
-    font-size: 14px;
+    font-size: 30px;
   }
 
   /* Our Partners */
