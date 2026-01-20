@@ -3,27 +3,27 @@
 /* -------------------------------------------------- */
 
 /* Variables and imports must come first */
-@import "_variables.css";
+@import url("_variables.css");
 
 /* Base styles */
-@import "_base.css";
+@import url("_base.css");
 
 /* Utilities */
-@import "_utilities.css";
+@import url("_utilities.css");
 
 /* Pages & Components */
-@import "_header.css";
-@import "_home.css";
-@import "_about.css";
-@import "_sign-up.css";
-@import "_courses.css";
-@import "_courses-details.css";
-@import "_contact-us.css";
-@import "_blog-details.css";
-@import "_show-details.css";
-@import "_orders.css";
-@import "_footer.css";
-@import "_dashbaord.css";
+@import url("_header.css");
+@import url("_home.css");
+@import url("_about.css");
+@import url("_sign-up.css");
+@import url("_courses.css");
+@import url("_courses-details.css");
+@import url("_contact-us.css");
+@import url("_blog-details.css");
+@import url("_show-details.css");
+@import url("_orders.css");
+@import url("_footer.css");
+@import url("_dashbaord.css");
 
 /* Responsive */
-@import "_responsive.css";
+@import url("_responsive.css");
